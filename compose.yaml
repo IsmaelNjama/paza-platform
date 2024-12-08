@@ -1,12 +1,10 @@
-version: "3.9"
-
 services:
   web:
     depends_on:
       - storage
       - api
 
-    build: ./paza-client
+    build: ./paza-frontend
 
     ports:
       - "3000:3000"
@@ -17,12 +15,12 @@ services:
     develop:
       watch:
         - action: rebuild
-          path: ./paza-client/package.json
+          path: ./paza-frontend/package.json
         - action: rebuild
-          path: ./paza-client/package-lock.json
+          path: ./paza-frontend/package-lock.json
 
         - action: sync
-          path: ./paza-client
+          path: ./paza-frontend
           target: /app
 
   storage:
@@ -35,9 +33,6 @@ services:
       - storage_url=http://localhost:2500
 
   api:
-    # depends_on:
-    #   - db
-
     build: ./paza-backend
 
     ports:
@@ -54,13 +49,3 @@ services:
         - action: sync
           path: ./paza-backend
           target: /app
-#   db:
-#     image: mongo:latest
-#     volumes:
-#     - paz:/data/db
-#     ports:
-#     - "27017:27017"
-
-# volumes:
-#   paz:
-
