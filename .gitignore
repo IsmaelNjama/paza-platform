@@ -1,7 +1,7 @@
 # Ignore service directories
 paza-storage/
-paza-client/
 paza-backend/
+paza-frontend/
 
 # Common files to ignore
 .env
