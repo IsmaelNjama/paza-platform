@@ -1,4 +1,4 @@
-How to Use
+
 Follow these steps to set up the paza-platform services on your environment:
 
 Clone the main repository
@@ -42,3 +42,5 @@ Stop the services
 To stop the running containers, use the following command:
 
 docker-compose down
+
+
