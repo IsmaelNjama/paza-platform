@@ -1,0 +1,8 @@
+# Ignore service directories
+paza-storage/
+paza-client/
+paza-backend/
+
+# Common files to ignore
+.env
+node_modules/

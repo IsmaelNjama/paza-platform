@@ -1,0 +1,66 @@
+version: "3.9"
+
+services:
+  web:
+    depends_on:
+      - storage
+      - api
+
+    build: ./paza-client
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      - api_url=http://localhost:8000
+
+    develop:
+      watch:
+        - action: rebuild
+          path: ./paza-client/package.json
+        - action: rebuild
+          path: ./paza-client/package-lock.json
+
+        - action: sync
+          path: ./paza-client
+          target: /app
+
+  storage:
+    build: ./paza-storage
+
+    ports:
+      - "2500:2500"
+
+    environment:
+      - storage_url=http://localhost:2500
+
+  api:
+    # depends_on:
+    #   - db
+
+    build: ./paza-backend
+
+    ports:
+      - "5050:5050"
+    env_file:
+      - ./paza-backend/.env
+
+    develop:
+      watch:
+        - action: rebuild
+          path: ./paza-backend/package.json
+        - action: rebuild
+          path: ./paza-backend/package-lock.json
+        - action: sync
+          path: ./paza-backend
+          target: /app
+#   db:
+#     image: mongo:latest
+#     volumes:
+#     - paz:/data/db
+#     ports:
+#     - "27017:27017"
+
+# volumes:
+#   paz:
+
