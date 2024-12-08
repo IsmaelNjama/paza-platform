@@ -1,5 +1,5 @@
 
-Follow these steps to set up the paza-platform services on your environment:
+Steps to set up the paza-platform services on your environment:
 
 Clone the main repository
 git clone https://github.com/IsmaelNjama/paza-platform.git
