@@ -61,7 +61,7 @@ docker compose up
 The above command will start all the services.
 
 7. Stop the services
-   To stop the running containers, use the following command:
+   Use the following command:
 
 ```bash
 docker compose down
