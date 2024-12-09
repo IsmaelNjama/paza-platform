@@ -1,46 +1,68 @@
+# paza-platform
 
-Steps to set up the paza-platform services on your environment:
+## How To Use
 
-Clone the main repository
+1. Clone the main repository
+
+```bash
 git clone https://github.com/IsmaelNjama/paza-platform.git
+```
 
-Navigate into the main directory
+2. Navigate into the main directory
+
+```bash
 cd paza-platform
+```
 
-Create the necessary folders
-Inside the paza-platform directory, create the following folders:
+3. Create the necessary folders
+   Inside the paza-platform directory, create the following folders:
 
+```bash
 mkdir paza-frontend paza-backend paza-storage
-Clone the individual repositories
+```
+
+4. Clone the individual repositories
 
 Backend:
 Navigate to the paza-backend folder and clone the backend repository:
+
+```bash
 cd paza-backend
 git clone https://github.com/IsmaelNjama/paza-backend.git .
+```
 
 Frontend:
 Navigate to the paza-frontend folder and clone the frontend repository:
+
+```bash
 cd ../paza-frontend
 git clone https://github.com/rebeccawaweru/paza-frontend.git .
+```
 
 Storage:
 Navigate to the paza-storage folder and clone the storage repository:
+
+```bash
 cd ../paza-storage
 git clone https://github.com/IsmaelNjama/paza-storage.git .
+```
 
-Set up your environment
-Each service requires environment variables to function correctly. Ensure you create and configure the .env files in each respective folder before running the services.
+5. Set up your environment
+   Each service requires environment variables to function correctly. Ensure you create and configure the .env files in each respective folder before running the services.
 
-Run the services
-After setting up the repositories and configuring the environment, navigate back to the paza-platform directory and run the services using Docker Compose:
+6. Run the services
+   After setting up the repositories and configuring the environment, navigate back to the paza-platform directory and run the services using Docker Compose:
+
+```bash
 cd ../paza-platform
-
 docker compose up
+```
+
 The above command will start all the services.
 
-Stop the services
-To stop the running containers, use the following command:
+7. Stop the services
+   To stop the running containers, use the following command:
 
-docker-compose down
-
-
+```bash
+docker compose down
+```
