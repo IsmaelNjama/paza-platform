@@ -2,6 +2,10 @@
 
 ## How To Use
 
+## Note
+  Before proceeding, ensure you have Docker Engine installed and running on your system:
+  Windows and WSL Users: Ensure Docker Desktop is installed and running
+
 1. Clone the main repository
 
 ```bash
