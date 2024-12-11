@@ -10,7 +10,8 @@ services:
       - "3000:3000"
 
     environment:
-      - api_url=http://localhost:8000
+      - API_URL=http://api:5050
+      - STORAGE_URL=http://storage:2500
 
     develop:
       watch:
@@ -28,9 +29,8 @@ services:
 
     ports:
       - "2500:2500"
-
-    environment:
-      - storage_url=http://localhost:5000
+    env_file:
+      - ./paza-storage/.env
 
   api:
     build: ./paza-backend
