@@ -27,7 +27,7 @@ services:
     build: ./paza-storage
 
     ports:
-      - "5000:5000"
+      - "2500:2500"
 
     environment:
       - storage_url=http://localhost:5000
