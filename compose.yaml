@@ -28,6 +28,8 @@ services:
 
     ports:
       - "2500:2500"
+    env_file:
+      - ./paza-storage/.env
 
     environment:
       - storage_url=http://localhost:5000
