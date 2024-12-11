@@ -1,5 +1,6 @@
 # Ignore service directories
 paza-storage/
+paza-frontend/
 paza-backend/
 paza-frontend/
 
